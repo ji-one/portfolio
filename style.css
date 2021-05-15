@@ -1,0 +1,132 @@
+:root {
+  --text-color-dark: #454360;
+  --text-color-light: #767492;
+
+  --background-color-light: #f9f9fe;
+  --background-color-dark: #353353;
+
+  --accent-color: #ffd15c;
+  --purple: #6c6ce4;
+  --yellow: #f9d74b;
+  --red: #ff4b60;
+  --white: #ffff;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  background-color: var(--background-color-light);
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color-dark);
+  font-weight: bold;
+  padding: 1rem;
+  border-bottom: 1px solid var(--background-color-light);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.navbar_logo {
+  color: var(--white);
+  padding: 0.5rem 2rem;
+  font-size: x-large;
+}
+
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  margin-right: 10vw;
+}
+
+.navbar_menu li a {
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+  padding: 0.5rem 1rem;
+}
+
+.navbar_menu li a.clicked,
+.navbar_menu li a:hover {
+  color: var(--accent-color);
+}
+
+.navbar_toggleBtn {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+/* Home */
+
+.home {
+  background-color: var(--background-color-dark);
+}
+.home_title {
+  padding-top: 20vh;
+}
+
+.home span {
+  margin: 0;
+  color: var(--white);
+  font-size: 32px;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.link a {
+  color: var(--white);
+  margin-right: 30px;
+  font-size: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Navigation Bar */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar_menu li {
+    text-align: center;
+  }
+  .navbar_toggleBtn {
+    display: block;
+  }
+  .navbar_menu.active {
+    display: flex;
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: white;
+  }
+}
+
+.typed {
+  font-size: 32px;
+  border-right: 0.05em solid black;
+  animation: cursor 0.5s ease infinite;
+}
