@@ -10,10 +10,10 @@ const menuList = document.querySelectorAll(".navbar_menu a");
 
 for (const element of menuList) {
   element.addEventListener("click", () => {
-    element.classList.add("clicked");
+    element.classList.add("active");
     for (const other of menuList) {
       if (other !== element) {
-        other.classList.remove("clicked");
+        other.classList.remove("active");
       }
     }
   });

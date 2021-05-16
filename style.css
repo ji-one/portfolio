@@ -11,12 +11,17 @@
   --red: #ff4b60;
   --white: #ffff;
 }
-
-body {
+* {
   box-sizing: border-box;
+}
+body {
   margin: 0;
   font-family: "Ubuntu", sans-serif;
   background-color: var(--background-color-light);
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Navigation Bar */
@@ -31,7 +36,6 @@ body {
 }
 
 .navbar a {
-  text-decoration: none;
   color: var(--white);
 }
 
@@ -51,11 +55,10 @@ body {
 .navbar_menu li a {
   display: inline-block;
   text-align: center;
-  width: 80px;
   padding: 0.5rem 1rem;
 }
 
-.navbar_menu li a.clicked,
+.navbar_menu li a.active,
 .navbar_menu li a:hover {
   color: var(--accent-color);
 }
@@ -69,18 +72,33 @@ body {
 }
 
 /* Home */
-
 .home {
+  display: flex;
   background-color: var(--background-color-dark);
-}
-.home_title {
-  padding-top: 20vh;
+  flex-direction: column;
+  align-items: center;
 }
 
-.home span {
+.home_title {
+  justify-content: center;
+  padding-top: 28vh;
+}
+
+.home_title span {
   margin: 0;
   color: var(--white);
-  font-size: 32px;
+  font-size: 3rem;
+}
+
+@keyframes cursor {
+  50% {
+    border-color: white;
+  }
+}
+
+.typed {
+  border-right: 0.05rem solid black;
+  animation: cursor 0.5s ease infinite;
 }
 
 .link {
@@ -93,6 +111,51 @@ body {
   color: var(--white);
   margin-right: 30px;
   font-size: 32px;
+}
+
+.link a:hover {
+  color: var(--accent-color);
+}
+
+.button {
+  display: inline-block;
+  color: var(--white);
+  background-color: var(--red);
+  border-radius: 60px;
+  padding: 12px 32px;
+  margin-top: 10vh;
+}
+
+.button:hover {
+  animation-duration: 0.4s;
+  animation-name: popButton;
+}
+
+@keyframes popButton {
+
+  50% {
+    transform: scale(0.8);
+  }
+}
+
+.wave_container {
+  margin-top: 10vh;
+}
+
+.wave_container > svg {
+  display: block;
+  width: 100vw;
+  transform-origin: bottom;
+  animation: animateWave 1000ms cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes animateWave {
+  0% {
+    transform: scale(1, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -117,16 +180,4 @@ body {
   .navbar_menu.active {
     display: flex;
   }
-}
-
-@keyframes cursor {
-  50% {
-    border-color: white;
-  }
-}
-
-.typed {
-  font-size: 32px;
-  border-right: 0.05em solid black;
-  animation: cursor 0.5s ease infinite;
 }

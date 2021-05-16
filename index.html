@@ -22,16 +22,18 @@
     <nav class="navbar">
       <span class="navbar_logo">Jiwon</span>
       <ul class="navbar_menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Project</a></li>
-        <li><a href="#">Say Hello</a></li>
+        <li><a href="#main_home" class="active">Home</a></li>
+        <li><a href="#main_about">About</a></li>
+        <li><a href="#main_project">Project</a></li>
+        <li><a href="#main_contact">Say Hello</a></li>
       </ul>
       <a href="#" class="navbar_toggleBtn"><i class="fas fa-bars"></i></a>
     </nav>
     <!-- Home -->
-    <section class="home">
-      <div class="home_title"><span>Hello, </span><span class="typed"></span></div>
+    <section class="home" id="main_home">
+      <div class="home_title">
+        <span>Hello,&nbsp</span><span class="typed"></span>
+      </div>
       <ul class="link">
         <li>
           <a href="https://github.com/ji-one"><i class="fab fa-github"></i></a>
@@ -52,7 +54,19 @@
           ></a>
         </li>
       </ul>
-      <a href="" id="know_btn">KNOW MORE</a>
+      <a href="#main_about" class="button">KNOW MORE</a>
+      <div class="wave_container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
+          <path
+            fill="#f9f9fe"
+            fill-opacity="1"
+            d="M0,96L40,85.3C80,75,160,53,240,69.3C320,85,400,139,480,154.7C560,171,640,149,720,122.7C800,96,880,64,960,74.7C1040,85,1120,139,1200,133.3C1280,128,1360,64,1400,32L1440,0L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+    </section>
+    <section class="about" id="main_about">
+      <div>dd</div>
     </section>
   </body>
 </html>
