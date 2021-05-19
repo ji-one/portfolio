@@ -16,6 +16,11 @@
       src="https://kit.fontawesome.com/b519885361.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      data-cfasync="false"
+      type="text/javascript"
+      src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"
+    ></script>
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -31,6 +36,12 @@
     </nav>
     <!-- Home -->
     <section class="home" id="main_home">
+      <img
+        class="profile_img"
+        src="https://i.ibb.co/tZVYKp0/IMG-3504.png"
+        alt="IMG-3504"
+        border="0"
+      />
       <div class="home_title">
         <span>Hello,&nbsp</span><span class="typed"></span>
       </div>
@@ -50,7 +61,7 @@
         </li>
         <li>
           <a href="https://jioneprogstdy.tistory.com/"
-            ><i class="fab fa-safari"></i
+            ><i class="fas fa-link"></i
           ></a>
         </li>
       </ul>
@@ -58,7 +69,7 @@
       <div class="wave_container">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
           <path
-            fill="#f9f9fe"
+            fill="#f3f7fb"
             fill-opacity="1"
             d="M0,96L40,85.3C80,75,160,53,240,69.3C320,85,400,139,480,154.7C560,171,640,149,720,122.7C800,96,880,64,960,74.7C1040,85,1120,139,1200,133.3C1280,128,1360,64,1400,32L1440,0L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
           ></path>
@@ -67,68 +78,198 @@
     </section>
     <!-- About Me-->
     <section class="about" id="main_about">
-      <h1 class="about_title">About Me</h1>
-      <div class="about_content"><img class="profile_img" src="https://i.ibb.co/tZVYKp0/IMG-3504.png" alt="IMG-3504" border="0">
-      <div class="about_box">
-        <div class="about_left_box">
-          <div class="name">
-            <h3>Name</h3>
-            <span>Jiwon Kim</span>
+      <h1 class="menu__title">About Me</h1>
+      <div class="about_content">
+        <img
+          class="profile_img"
+          src="https://i.ibb.co/tZVYKp0/IMG-3504.png"
+          alt="IMG-3504"
+          border="0"
+        />
+        <div class="about_box">
+          <div class="about_left_box">
+            <div class="name">
+              <h3>Name</h3>
+              <span class="text">Jiwon Kim</span>
+            </div>
+            <div class="address">
+              <h3>Address</h3>
+              <span class="text">Daegu, Korea</span>
+            </div>
+            <div class="birthDate">
+              <h3>BirthDate</h3>
+              <span class="text">1998.09.21</span>
+            </div>
+            <div class="email">
+              <h3>E-mail</h3>
+              <span class="text">rlawldnjs8@gmail.com</span>
+            </div>
+            <div class="phone">
+              <h3>Phone</h3>
+              <span class="text">+821071327520</span>
+            </div>
           </div>
-          <div class="address">
-            <h3>Address</h3>
-            <span>Daegu, Korea</span>
+          <div class="about_right_box">
+            <div class="education">
+              <h3>Education</h3>
+              <span class="text">Pusan National University</span>
+              <span class="text accent">Computer Science & Engineering</span>
+              <span class="text small">March 2017 – February 2022</span>
+            </div>
+            <div class="experience">
+              <h3>Experience</h3>
+              <ul>
+                <li class="text">
+                  Algorithm Developer Intern
+                  <span class="text accent">Medipixel</span>
+                  <span class="text small">February 2021 – March 2021</span>
+                </li>
+                <li class="text">
+                  Python Developer Intern
+                  <span class="text accent">Dataedu</span>
+                  <span class="text small">July 2020 – September 2020</span>
+                </li>
+              </ul>
+            </div>
+            <div class="participation">
+              <h3>Participation</h3>
+              <ul>
+                <li class="text">The 2nd PNU DSC Hackathon 2020</li>
+                <li class="text">Software Education Festival - Bexco 2018</li>
+              </ul>
+            </div>
+            <div class="skills">
+              <h3>Skills</h3>
+              <ul>
+                <li class="text">C/C++</li>
+                <li class="text">Java</li>
+                <li class="text">HTML</li>
+                <li class="text">CSS</li>
+                <li class="text">Vue</li>
+                <li class="text">JavaScript</li>
+                <li class="text">Git</li>
+                <li class="text">Python</li>
+              </ul>
+            </div>
           </div>
-          <div class="birthDate">
-            <h3>BirthDate</h3>
-            <span>1998.09.21</span>
-          </div>
-          <div class="email">
-            <h3>E-mail</h3>
-            <span>rlawldnjs8@gmail.com</span>
         </div>
-          <div class="phone">
-            <h3>Phone</h3>
-            <span>+821071327520</span>
+      </div>
+    </section>
+    <!-- Project -->
+    <section class="project" id="main_project">
+      <h1 class="menu__title">Project</h1>
+      <div class="window">
+        <div class="window__header">
+          <div class="window__header__actions">
+            <span class="red"></span>
+            <span class="yellow"></span>
+            <span class="green"></span>
           </div>
         </div>
-        <div class="about_right_box">
-          <div class="education"><h3>Education</h3>
-              <span class="about_main_description">Pusan National University</span>
-              <span class="about_sub_description">Computer Science & Engineering</span> 
-              <span class="about_date">March 2017 – February 2022</span></div>
-          <div class="experience"><h3>Experience</h3>
-            <ul>
-              <li><span class="about_main_description">Algorithm Developer Intern<span>
-                <span class="about_sub_description">Medipixel</span> 
-                <span class="about_date">February 2021 – March 2021</span></li>
-              <li><span class="about_main_description">Python Developer Intern<span>
-                <span class="about_sub_description">Dataedu</span> 
-                <span class="about_date">July 2020 – September 2020</span></li>  
-            </ul>
-          </div>
-          <div class="participation">
-          <h3>Participation</h3>
-          <ul>
-            <li>The 2nd PNU DSC Hackathon 2020</li>
-            <li>Software Education Festival - Bexco 2018</li>
-          </ul></div>
-          <div class="skills">
-            <h3>Skills</h3>
-            <ul>
-              <li>C/C++</li>
-              <li>Java</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Vue</li>
-              <li>JavaScript</li>
-              <li>Git</li>
-              <li>Python</li>
-            </ul>
+        <div class="window__content">
+          <h2 class="project__title">모임잡히누 (모임잡PNU)</h2>
+          <span class="project__summary text"
+            >부산대학교 DSC 3기 팀 프로젝트<br />
+            부산대학교 학생들을 위한 스터디 그룹 매칭 시스템<br
+          /></span>
+          <div class="project__content">
+            <div class="project__img__link__container">
+              <img
+                class="project__img"
+                src="https://i.ibb.co/BP2z85T/2021-05-18-10-10-20.png"
+                alt="사진 준비중 .... "
+                border="0"
+              />
+              <ul class="project__link">
+                <li>
+                  <a
+                    class="button"
+                    href="https://github.com/ji-one/dsc-jobPNU-frontend"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="button" href=""><i class="fas fa-link"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="project__detail">
+              <div class="features">
+                <h3>Features</h3>
+                <ul>
+                  <li class="text">불량 회원 제재를 위한 유저 평가 기능</li>
+                  <li class="text">일정 관리</li>
+                  <li class="text">게시판</li>
+                </ul>
+              </div>
+              <div class="devPeriod">
+                <h3>Dev Period</h3>
+                <span class="text">2020.10.08 ~ 2020.12.28</span>
+              </div>
+              <div class="stack">
+                <h3>Stack</h3>
+                <ul>
+                  <li>
+                    <img
+                      src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue-dot-js&logoColor=4FC08D"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img
+                    src=https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white
+                    alt=""/>
+                  </li>
+                  <li>
+                    <img
+                      src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="contribute">
+                <h3>Contribute</h3>
+                <span class="text accent">Frontend</span>
+                <ul>
+                  <li class="text">스터디 생성 & 관리</li>
+                  <li class="text">스터디 참가 신청</li>
+                  <li class="text">유저 평가</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </div></div>
-      
+      </div>
+    </section>
+    <!-- Say Hello -->
+    <section class="say__hello">
+      <h1 class="menu__title">Say Hello</h1>
+        <form
+          class="gform"
+          method="POST"
+          action="https://script.google.com/macros/s/AKfycby85e7KDmVvLcrK-JOkbq7Xu8gR5zD9XBaGoZzL6jY0_FY8g9t7C0vdINMxMigdyaY8/exec"
+        >
+          <h3>Name</h3>
+          <input type="text" name="name" required />
+          <h3>Email</h3>
+          <input type="text" name="email" required />
+          <h3>Message</h3>
+          <textarea type="text" name="message" required ></textarea>
+          <form action="https://script.google.com/macros/s/..." method="post">
+            <label class="sr-only">Keep this field blank</label>
+            <input id="honeypot" type="text" name="honeypot" value="" />
+          <input type="submit" value="submit" />
+          <div style="display: none" class="thankyou_message">
+            <h2>Thanks for contacting me! I will get back to you soon!</h2>
+          </div>
+      </form>
     </section>
   </body>
 </html>
