@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="animate.css" />
     <script src="main.js" defer></script>
     <script type="module" src="form-submission-handler.js" defer></script>
     <script
@@ -24,11 +25,14 @@
       src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"
       defer
     ></script>
+    <script type="text/javascript" src="wow.min.js"></script>
   </head>
   <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
-      <span class="navbar_logo">Jiwon</span>
+      <span class="navbar_logo"
+        ><a href="javascript:location.reload()">Jiwon</a></span
+      >
       <ul class="navbar_menu">
         <li><a href="#main_home" class="active">Home</a></li>
         <li><a href="#main_about">About</a></li>
@@ -80,7 +84,7 @@
       </div>
     </section>
     <!-- About Me-->
-    <section class="about" id="main_about">
+    <section class="about wow fadeInUpBig" id="main_about">
       <h1 class="menu__title">About Me</h1>
       <div class="about_content">
         <img
@@ -159,7 +163,7 @@
       </div>
     </section>
     <!-- Project -->
-    <section class="project" id="main_project">
+    <section class="project wow fadeInUpBig" id="main_project">
       <h1 class="menu__title">Project</h1>
       <div class="window">
         <div class="window__header">
@@ -252,7 +256,7 @@
       </div>
     </section>
     <!-- Say Hello -->
-    <section class="sayhello">
+    <section class="sayhello wow fadeInUpBig">
       <h1 class="menu__title">Say Hello</h1>
       <div class="sayhello__container">
         <form
@@ -302,7 +306,7 @@
     </section>
     <!-- footer -->
     <footer>
-      <span>Designed and developed by 김지원</span>
+      <span>Designed and developed by ji-one</span>
       <!-- <img src="https://i.ibb.co/BqgvJ3B/footer.png" alt="footer" /> -->
     </footer>
   </body>
