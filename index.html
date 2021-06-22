@@ -12,14 +12,17 @@
       rel="stylesheet"
     />
     <script src="main.js" defer></script>
+    <script type="module" src="form-submission-handler.js" defer></script>
     <script
       src="https://kit.fontawesome.com/b519885361.js"
       crossorigin="anonymous"
+      defer
     ></script>
     <script
       data-cfasync="false"
       type="text/javascript"
       src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"
+      defer
     ></script>
   </head>
   <body>
@@ -249,27 +252,58 @@
       </div>
     </section>
     <!-- Say Hello -->
-    <section class="say__hello">
+    <section class="sayhello">
       <h1 class="menu__title">Say Hello</h1>
+      <div class="sayhello__container">
         <form
           class="gform"
           method="POST"
           action="https://script.google.com/macros/s/AKfycby85e7KDmVvLcrK-JOkbq7Xu8gR5zD9XBaGoZzL6jY0_FY8g9t7C0vdINMxMigdyaY8/exec"
         >
-          <h3>Name</h3>
-          <input type="text" name="name" required />
-          <h3>Email</h3>
-          <input type="text" name="email" required />
-          <h3>Message</h3>
-          <textarea type="text" name="message" required ></textarea>
+          <div class="name__email__box">
+            <input
+              type="text"
+              name="name"
+              placeholder="Write down your name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="id@email.com"
+              required
+            />
+          </div>
+          <textarea
+            name="message"
+            placeholder="Write down the message you want to send me"
+            required
+          ></textarea>
           <form action="https://script.google.com/macros/s/..." method="post">
             <label class="sr-only">Keep this field blank</label>
             <input id="honeypot" type="text" name="honeypot" value="" />
-          <input type="submit" value="submit" />
-          <div style="display: none" class="thankyou_message">
-            <h2>Thanks for contacting me! I will get back to you soon!</h2>
-          </div>
-      </form>
+            <input class="button" type="submit" value="send message" />
+            <!-- <div class="thankyou__message">
+              <span class="text"
+                >Thanks for contacting me! I will get back to you soon! 💛</span
+              >
+            </div> -->
+          </form>
+        </form>
+        <div class="sayhello__message">
+          <h3>Send me an Email</h3>
+          <span class="text"
+            >I would love to hear from you !<br />
+            Please use the contact form to send me a message.</span
+          >
+          <span id="mail_emoticon">&#x1F48C;</span>
+        </div>
+      </div>
     </section>
+    <!-- footer -->
+    <footer>
+      <span>Designed and developed by 김지원</span>
+      <!-- <img src="https://i.ibb.co/BqgvJ3B/footer.png" alt="footer" /> -->
+    </footer>
   </body>
 </html>

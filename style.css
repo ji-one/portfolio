@@ -11,18 +11,23 @@
   --red: #ff8786;
   --white: #ffff;
   --light-gray: #cfcdd1;
+  --error: red;
 }
 * {
   box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
 }
 body {
   margin: 0;
-  font-family: "Ubuntu", sans-serif;
   background-color: var(--background-color-light);
 }
 
 a {
   text-decoration: none;
+}
+
+section {
+  margin-bottom: 100px;
 }
 
 h3,
@@ -35,6 +40,10 @@ h2 {
   color: var(--text-color-light);
 }
 
+.invalid__text {
+  color: var(--error);
+}
+
 .text.accent {
   font-size: 0.95em;
   font-weight: bold;
@@ -43,6 +52,10 @@ h2 {
 
 .text.small {
   font-size: 0.8em;
+}
+
+input[type="submit"] {
+  border: none;
 }
 
 /* Navigation Bar */
@@ -149,11 +162,12 @@ h2 {
 }
 
 .button {
-  display: inline-block;
   color: var(--white);
+  text-transform: uppercase;
   background-color: var(--red);
   border-radius: 60px;
-  padding: 0.75rem 1.25rem;
+  padding: 0.8rem 1.25rem;
+  font-size: 16px;
 }
 
 .button:hover {
@@ -337,8 +351,8 @@ h2 {
 .project__link {
   display: flex;
   justify-content: center;
-  font-size: 1.5em;
   padding-left: 0;
+  padding-top: 1.5em;
 }
 
 .project__link > li {
@@ -358,6 +372,104 @@ h2 {
 .project__detail span {
   margin-left: 2em;
 }
+
+/* Say Hello */
+.sayhello__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0vh 7vw;
+}
+
+.gform {
+  width: 60%;
+}
+
+
+.gform > .name__email__box {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+}
+
+.gform > .name__email__box input,
+textarea {
+  border: none;
+  font-size: 1rem;
+}
+
+.gform > .name__email__box input[type="text"],
+input[type="email"],
+textarea {
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px var(--light-gray);
+  padding: 1em 1em;
+}
+
+/* .gform > input[type="email"] {
+  margin-left: 30%;
+} */
+
+.gform > .name__email__box input[type="text"],
+input[type="email"] {
+  width: 45%;
+  height: 7vh;
+}
+
+.gform > textarea {
+  width: 85%;
+  height: 20vh;
+  margin: 2em 0;
+}
+
+.gform textarea:focus{
+  border: 3px solid var(--sky-blue);
+}
+
+.gform .name__email__box input[type="text"]:focus,
+.name__email__box input[type="email"]:focus{
+  border: 3px solid var(--sky-blue);
+}
+
+.sayhello__message {
+  text-align: center;
+}
+
+#mail_emoticon {
+  display: block;
+  font-size: 8em;
+}
+
+#honeypot {
+  display: none;
+}
+
+/* .thankyou__message {
+  display: none;
+  padding: 2em 0;
+} */
+
+#empty_name {
+  display: none;
+}
+
+#invalid_email {
+  display: none;
+}
+/* footer */
+footer {
+  background-color: var(--background-color-dark);
+  text-align: center;
+  padding: 1rem;
+}
+
+footer span{
+  color: var(--white);
+}
+/* footer img {
+  width: 400px;
+} */
 
 @media screen and (max-width: 768px) {
   /* Navigation Bar */
@@ -421,4 +533,24 @@ h2 {
   .project__detail {
     margin-left: 0;
   }
+
+  /* Say Hello */
+  .sayhello__container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+
+  .gform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+/* 
+
+  .gform {
+    width: 80%;
+  } */
 }
