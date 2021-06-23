@@ -81,13 +81,6 @@
     if (!validEmail(data.email)) {
       console.log("invalid email");
       document.querySelector(".gform").action = "";
-      // document.querySelector(".gform input[name='email']").setCustomValidity("The e-mail address entered is invalid.");
-      // document
-      //   .querySelector(".gform input[name='email']")
-      //   .addEventListener("invalid", (e) => {
-      //     // console.log(e);
-      //     // this.setCustomValidity("The e-mail address entered is invalid.");
-      //   });
       return false;
     } else if (formData.honeypot) {
       // If a honeypot field is filled, assume it was done so by a spam bot.
@@ -102,15 +95,11 @@
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
+          alert("Thanks for contacting me! I will get back to you soon! 💛");
           form.reset();
           var formElements = form.querySelector(".form-elements");
           if (formElements) {
             formElements.style.display = "none"; // hide form
-          }
-          var thankYouMessage = form.querySelector(".thankyou__message");
-          if (thankYouMessage) {
-            alert("Thanks for contacting me! I will get back to you soon! 💛");
-            // thankYouMessage.style.display = "block";
           }
         }
       };
