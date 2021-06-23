@@ -1,15 +1,4 @@
-// const { spawn } = require("child_process");
-
-// const emailInput = document.querySelector(".gform input[name='email']");
-
-// emailInput.addEventListener("invalid", (e) => {
-//   if (e.target.value === "") {
-//     emailInput.setCustomValidity("The field is required.");
-//     console.log("ee")
-//   } else {
-//     emailInput.setCustomValidity("The e-mail address entered is invalid.");
-//   }
-// })
+const { spawn } = require("child_process");
 
 (function () {
   // get all data in form and return object
@@ -79,12 +68,10 @@
     var data = formData.data;
 
     if (!validEmail(data.email)) {
-      console.log("invalid email");
       document.querySelector(".gform").action = "";
       return false;
     } else if (formData.honeypot) {
       // If a honeypot field is filled, assume it was done so by a spam bot.
-      console.log("honeypot");
       return false;
     } else {
       //   disableAllButtons(form);
