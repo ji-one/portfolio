@@ -1,5 +1,4 @@
-# portfolio
-🔗 https://ji-one.github.io/portfolio/
+# portfolio 😇
 
 #### 주요 특징
 - 반응형 (PC, 태블릿, 스마트폰 모두 확인 가능)
