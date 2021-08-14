@@ -1,4 +1,4 @@
-# portfolio 
+### portfolio 
 - 반응형 (PC, 태블릿, 스마트폰 모두 확인 가능)
 - 단일 페이지
 - framework 없이 `html`, `css`, `javascript`로 구현
